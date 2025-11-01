@@ -15,7 +15,6 @@ jobs:
         with:
           token: ${{ steps.app-token.outputs.token }}
           ref: protected/branch1
-          persist-credentials: false
 
       - run: |
           git config --global user.name 'Custom Github Flow[bot]'
