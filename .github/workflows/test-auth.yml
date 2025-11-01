@@ -22,8 +22,8 @@ jobs:
           git config --global user.email 'noone@users.noreply.github.com'
 
       - run: |
-          echo date > testfile.txt 
-          git add testfile 
-          git commit -m "Test Workflow
+          date > testfile.txt 
+          git add testfile.txt 
+          git commit -m "Test Workflow"
 
       - run: git push
