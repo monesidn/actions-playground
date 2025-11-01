@@ -14,9 +14,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ steps.app-token.outputs.token }}
-          ref: ${{ github.head_ref }}
+          ref: protected/branch1
           persist-credentials: false
 
-      - name: Hello World
-        run: |
-          echo Hello World
+      - run: |
+          git config --global user.name 'Custom Github Flow[bot]'
+          git config --global user.email 'noone@users.noreply.github.com'
+
+      - run: |
+          echo date > testfile.txt 
+          git add testfile 
+          git commit -m "Test Workflow
+
+      - run: git push
